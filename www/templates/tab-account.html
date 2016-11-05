@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<ion-view view-title="Grid">
+  <ion-content>
+    	<b>Grid</b>
+    	<ionic-content>
+	    	<div class="row">
+				<div class="col" style="background-color:lightgreen; border:2px solid green">Foto</div>
+				<div class="col" style="background-color:lightgreen; border:2px solid green">Nombre</div>
+				<div class="col" style="background-color:lightgreen; border:2px solid green">Mensaje</div>
+				<div class="col" style="background-color:lightgreen; border:2px solid green">Meme</div>
+			</div>  
+	    	<div class="row"  ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+				<div class="col" style="background-color:lightgreen; border:2px solid green"><img ng-src="{{chat.foto}}" style="width: 50px; height: 50px"></div>
+				<div class="col" style="background-color:lightgreen; border:2px solid green"><td>{{chat.nombre}}</td></div>
+				<div class="col" style="background-color:lightgreen; border:2px solid green">{{chat.mensaje}}</div>
+				<div class="col" style="background-color:lightgreen; border:2px solid green"><img ng-src="{{chat.meme}}" style="width: 50px; height: 50px"></div>
+			</div>    
+    	</ionic-content>
+  </ion-content>
+</ion-view>

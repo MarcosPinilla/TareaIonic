@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<ion-view view-title="Contactos">
+  <ion-content class="padding">
+    <table class="table" class="col-sm-20">
+      <thead>
+        <tr class="positive">
+          <th>Foto</th>
+          <th>Nombre</th>
+          <th>Mensaje</th>
+          <th>Meme</th>
+        </tr>
+          
+        
+      </thead>
+
+      <tbody ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <tr class="padding">
+          <td><img ng-src="{{chat.foto}}" style="width: 50px; height: 50px"></td>
+          <td>{{chat.nombre}}</td>
+          <td>{{chat.mensaje}}</td>
+          <td><img ng-src="{{chat.meme}}" style="width: 50px; height: 50px"></td>
+        </tr>
+      </tbody>
+    </table>
+
+  </ion-content>
+</ion-view>
